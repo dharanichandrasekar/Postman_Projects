@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "0c82b29a-0725-41bd-81b9-5acf39e167d0",
+		"name": "#7. Execution Orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13800846"
+	},
+	"item": [
+		{
+			"name": "Folder Order",
+			"item": [
+				{
+					"name": "Google",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"Request Level >Post-Request (Test Scripts): After Google Request\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.log(\"Request Level > Pre-Request Script: Before Google Request\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.google.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"google",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instagram",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"Request Level >Post-Request (Test Scripts):  After Instagram Request\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.log(\"Request Level > Pre-Request Script: Before Instagram Request\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.instagram.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"instagram",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StackOverFlow",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"Request Level >Post-Request (Test Scripts):  After StackOverFlow Request\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.log(\"Request Level > Pre-Request Script: Before StackOverFlow Request\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.stackoverflow.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"stackoverflow",
+								"com"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"Folder Level > Pre-Request: Folder execution starts\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"Folder Level > Post-Request (Test Scripts): Folder execution ends\");"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Request Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(\"Request Level >Post-Request (Test Scripts): After outlook Request\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.log(\"Request Level > Pre-Request Script: Before outlook Request\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.outlook.com",
+					"protocol": "http",
+					"host": [
+						"www",
+						"outlook",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

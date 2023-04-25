@@ -1,0 +1,10 @@
+{
+	"info": {
+		"_postman_id": "a7cbdd87-e529-48fd-9773-57397b4262fe",
+		"name": "13. Jenkins Integration",
+		"description": "**Jenkins**:  \nThis will be used for **continuous integration and continuous delivery.**\n\n- **Create a personal Jenkins account for exploration**\n- **Precondition**: Java should installed\n    \n\n**How to Download and****install the Jenkins**\n\nStep 1 : Download Jenkins war file - [https://jenkins.io/](https://www.youtube.com/redirect?q=https://jenkins.io/&v=89yWXXIOisk&redir_token=QUFFLUhqbUtELUo3MVpOMUp5eEpwdGxpdVVOcGZ2WTJIZ3xBQ3Jtc0tuZG9xR01kTllQbndWUFJSSkZLVUNsTHpjVE1zN3ZLZ3F2QWYzVVRjODlVcGhmWVN2eUJYSW1YYk85bVdaU1d6dGNlYXVaTTFMRDhUaU4wVHN4bnFVN2RuSXBNbWJUNW9jVkNyc1VEOWVPS1h1NFdlYw==&event=video_description)\n\nStep 2 : Place the war file into any location on your system\n\nStep 3 : goto command prompt (windows) | terminal (mac)\n\n- goto folder where jenkins.war and open cmd  \n    window enter as **java -jar jenkins.war**\n    \n\nOnce jenkins server is Up and running , then go to the jenkins site.\n\nStep 4 : goto browser - [http://localhost:8080](https://www.youtube.com/redirect?q=http://localhost:8080&v=89yWXXIOisk&redir_token=QUFFLUhqbmlGeVdGQW1IYUNYUnE5d2IyWnctdkVJcGI1Z3xBQ3Jtc0tuR2xoT3RHemhEN3FlYnFib2Nhd0VkRFR3LU1FVW1WaVRGdjJVY1ExSzUtTy0zRWV6VGNnSVpKcU1vZWVSTDJfaTl2MnJLWUE4a3hmRnY5aTgxalZvMVIyUUxpUGpsNzVNcWdsOHp2eDlpRkt6NUVFQQ==&event=video_description) (Jenkins window should show up) (we  \ncan replace the ip address instead of localhost text)\n\nStep 5 : install required plugins  \nStep 6 : get started with Jenkins\n\n---\n\n**How to configure the Project in jenkins :**\n\n1. Login to Jenkins site >\n2. Create a new project (give any meaningfull name) >\n3. Choose ‘Freestyle Project’ >\n4. Under the ‘Build’ option >\n5. Select the ‘Execute windows Batch Command’ option >\n6. then enter the command as “ newman run CollectionName.Json or CollectionLink “\n    \n\n**Result will be in console output**\n\n**************",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13800846"
+	},
+	"item": []
+}

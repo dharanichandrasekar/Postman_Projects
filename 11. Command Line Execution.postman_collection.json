@@ -1,0 +1,10 @@
+{
+	"info": {
+		"_postman_id": "43578d8b-0464-4138-8573-632a7f73bc02",
+		"name": "11. Command Line Execution",
+		"description": "**Console – Command Line Interface (CLI)**\n\n**Precondition**: Need to install node js and newman\n\n**a) Node js** :- Download link: [https://nodejs.org/en/download](https://nodejs.org/en/download)\n\n**b) Newman** :- Command prompt installation ( mentioned as below lines)\n\n**Steps**:  \n1\\. Open the command prompt .  \n2\\. Enter the comment as **“npm install –g newman”**\n\n**Note**: It will take few mins to install then Up and Run. Once it completed we can run the postman collections in command line**.**\n\n**Execution Steps**:\n\n1. Before going to execute ( export the collection and store in any one folder ) or (copy the collection id and make a note of it)\n2. Go to cmd line > C:\\\\ xxxxxxxx> **newman run** _**CollectionName.json**_ then press the Enter key, it will start to execute the collection.\n3. You will get the results as soon as possible.\n    \n\n**Hints** :\n\n1. npm (node package manager)\n2. For getting the collection link -> Go to ‘collections’ > Right click > choose ‘Share’ > click ‘Via API’ > _copy the link_.\n3. If I want to run the same collection 3 times means > C:\\\\xxxxxx> newman run _CollectionName.json –n 3_\n4. If I want to run the data driven collection means > _C:\\\\xxxxxx>newman run CollectionName.json –d (dataFile.csv or dataFile.json) –folder (folderName if anything created under__the collection)_\n    \n\n_************\\*_",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13800846"
+	},
+	"item": []
+}

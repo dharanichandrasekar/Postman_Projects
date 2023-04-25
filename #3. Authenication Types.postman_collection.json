@@ -1,0 +1,954 @@
+{
+	"info": {
+		"_postman_id": "bce36207-f9d5-46dc-90a3-ce2d9fee3605",
+		"name": "#3. Authenication Types",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13800846"
+	},
+	"item": [
+		{
+			"name": "1.No Auth",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Elumalai\",\r\n    \"job\": \"IT Profesional\",\r\n    \"Designation\": \"Manager\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/user",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users?page=539",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "539"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Elumalai Devarajan\",\r\n    \"job\": \"IT Profesional\",\r\n    \"Designation\": \"Senior Manager\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/user/539",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"user",
+								"539"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://reqres.in/api/user/539",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"user",
+								"539"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2.Basic Auth",
+			"item": [
+				{
+					"name": "Valid Authentication",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "postman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/basic-auth",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"basic-auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid Authenication",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password-InvalidAuth",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "postman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/basic-auth",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"basic-auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3.API Key",
+			"item": [
+				{
+					"name": "WeatherMap using CityName",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "d144d20bae14f8bf6ebe0e2426787a42",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "appid",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?q=London",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "London"
+								},
+								{
+									"key": "appid",
+									"value": "592d9e2af30be7551e421d1bc877634f",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid API Key",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "592d9e2af30be7551e421d1bc877634f_invalidAPIkey132432sdfsdafasdfjkgkjasdf",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "appid",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?q=London",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "London"
+								},
+								{
+									"key": "appid",
+									"value": "592d9e2af30be7551e421d1bc877634f",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4. Bearer Token",
+			"item": [
+				{
+					"name": "Creating a new repo in github",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Postman_DC_Repo_{{$isoTimestamp}}\",\r\n    \"description\": \"This is Bearer Authenication Token Verificaiton\",\r\n    \"homepage\": \"https://docs.github.com\",\r\n    \"private\": false,\r\n    \"has_issues\": true,\r\n    \"has_projects\": true,\r\n    \"has_wiki\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retreving the repo from github",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update the exisiting repo in github",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.github+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <YOUR-TOKEN>"
+							},
+							{
+								"key": "X-GitHub-Api-Version",
+								"value": "2022-11-28"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Postman_DC_Repo_Updated_{{$isoTimestamp}}\",\r\n    \"description\": \"This is Bearer Authenication Token Verificaiton\",\r\n    \"homepage\": \"https://docs.github.com\",\r\n    \"private\": false,\r\n    \"has_issues\": true,\r\n    \"has_projects\": true,\r\n    \"has_wiki\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/dharanichandrasekar/Postman_DC_Repo",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"dharanichandrasekar",
+								"Postman_DC_Repo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete the exisiting repo in github",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.github+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <YOUR-TOKEN>"
+							},
+							{
+								"key": "X-GitHub-Api-Version",
+								"value": "2022-11-28"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/dharanichandrasekar/Postman_Updated_Repo_Updated_2023-04-10T06-19-30.389Z",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"dharanichandrasekar",
+								"Postman_Updated_Repo_Updated_2023-04-10T06-19-30.389Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InValid Bearer token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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-Sample123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "5. Digest Auth",
+			"item": [
+				{
+					"name": "Valid Authentication",
+					"request": {
+						"auth": {
+							"type": "digest",
+							"digest": [
+								{
+									"key": "disableRetryRequest",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "postman",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "MD5",
+									"type": "string"
+								},
+								{
+									"key": "clientNonce",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "nonceCount",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "qop",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "nonce",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "realm",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/digest-auth",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"digest-auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid Authenication",
+					"request": {
+						"auth": {
+							"type": "digest",
+							"digest": [
+								{
+									"key": "password",
+									"value": "passwordI-Invalid",
+									"type": "string"
+								},
+								{
+									"key": "disableRetryRequest",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "username",
+									"value": "postman",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "MD5",
+									"type": "string"
+								},
+								{
+									"key": "clientNonce",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "nonceCount",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "qop",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "nonce",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "realm",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/digest-auth",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"digest-auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "6.OAuth2.0 Token",
+			"item": [
+				{
+					"name": "Creating a New Repo in Github using OAuth2.0 token",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Postman_Repo_using_OAuth2.0 token_001\",\r\n    \"description\": \"This is OAuth2.0 Authenication Token Verificaiton\",\r\n    \"homepage\": \"https://docs.github.com\",\r\n    \"private\": false,\r\n    \"has_issues\": true,\r\n    \"has_projects\": true,\r\n    \"has_wiki\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retreving the repo from github",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update the exisiting repo in github",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.github+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <YOUR-TOKEN>"
+							},
+							{
+								"key": "X-GitHub-Api-Version",
+								"value": "2022-11-28"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Postman_Repo_using_OAuth2.0-token_001_Updated2\",\r\n    \"description\": \"This is O Auth2.0 Authenication Token Verificaiton\",\r\n    \"homepage\": \"https://docs.github.com\",\r\n    \"private\": false,\r\n    \"has_issues\": true,\r\n    \"has_projects\": true,\r\n    \"has_wiki\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/dharanichandrasekar/Postman_Repo_using_OAuth2.0-token_001",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"dharanichandrasekar",
+								"Postman_Repo_using_OAuth2.0-token_001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete the exisiting repo in github",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.github+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <YOUR-TOKEN>"
+							},
+							{
+								"key": "X-GitHub-Api-Version",
+								"value": "2022-11-28"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/dharanichandrasekar/Postman_Repo_using_OAuth2.0-token_001_Updated2",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"dharanichandrasekar",
+								"Postman_Repo_using_OAuth2.0-token_001_Updated2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid Bearer token",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "repo_name",
+			"value": ""
+		},
+		{
+			"key": "updated_repo_name",
+			"value": ""
+		},
+		{
+			"key": "access_token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

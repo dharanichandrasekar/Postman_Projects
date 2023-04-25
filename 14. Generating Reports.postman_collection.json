@@ -1,0 +1,10 @@
+{
+	"info": {
+		"_postman_id": "dc6c2d2d-d81f-4f7b-a1c1-7827d5a77938",
+		"name": "14. Generating Reports",
+		"description": "**Reports :**\n\n**Precondition** : Should have nodejs and newman\n\n**Offical sites** :\n\na) **HTML Reports** : [https://www.npmjs.com/package/newman-reporter-htmlextra](https://www.npmjs.com/package/newman-reporter-htmlextrab))\n\nb) **Junit Reports** : [https://www.npmjs.com/package/newman-reporter-junitfullreport](https://www.npmjs.com/package/newman-reporter-junitfullreport)\n\n_**_\n\n**A) HTML REPORTS :**\n\n**Install via command prompt**: npm i newman-reporter-htmlextra\n\n**cmd >** C:\\\\Users\\\\dharani.chandrasekar>npm i -g newman-reporter-htmlextra\n\n**Steps to generate the Reports:**\n\n**1** Export the collection from postman (or) copy the  \ncollection id from postman\n\n**2** Save in desktop or any location\n\n**3** Copy the collection name and execute in cmd session\n\n**Syntax** : newman run “xxxxxxcollection.json” –r htmlextra\n\n**example**. C:\\\\Users\\\\dharani.chandrasekar\\\\Desktop>newman run \"!!!!!! REST Request.postman_collection.json\" -r htmlextra\n\n---\n\n**B ) JUNIT REPORTS:**\n\nInstall via command prompt: npm i newman-reporter-junitfullreport\n\n**cmd >** C:\\\\Users\\\\dharani.chandrasekar>npm i -g newman-reporter-junitfullreport\n\n**Steps to generate the Reports:**\n\n**1** Export the collection from postman (or) copy the  \ncollection id from postman\n\n**2** Save in desktop or any location\n\n**3** Copy the collection name and execute in cmd session\n\n**Syntax**: newman run “xxxxCollection.json” -r junit --reporter-junit-export\n\n**Example** : C:\\\\Users\\\\dharani.chandrasekar\\\\Desktop>newman run \"!!!!!! REST Request.postman_collection.json\" -r junit --reporter-junit-export\n\n---",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13800846"
+	},
+	"item": []
+}

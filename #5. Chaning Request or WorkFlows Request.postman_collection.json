@@ -1,0 +1,672 @@
+{
+	"info": {
+		"_postman_id": "6d2dbce2-dd06-4fc3-9a5d-502d23554ce5",
+		"name": "#5. Chaning Request or WorkFlows Request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13800846"
+	},
+	"item": [
+		{
+			"name": "WorkFlows using Request-name",
+			"item": [
+				{
+					"name": "Google",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Yahoo\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.google.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"google",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bing",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.bing.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"bing",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yahoo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Facebook\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.yahoo.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"yahoo",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Facebook",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Instagram\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.facebook.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"facebook",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Twitter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.twitter.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"twitter",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instagram",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Google\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.instagram.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"instagram",
+								"com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WorkFlows using Request-id",
+			"item": [
+				{
+					"name": "Google",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"c69cb689-2bb3-42c5-ac99-970919691daa\") //Yahoo Request-id"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.google.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"google",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.bing.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"bing",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yahoo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Twitter\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.yahoo.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"yahoo",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Facebook",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"01db39ae-274e-4abc-83a1-36db16c46321\") //Twitter Request -id"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.facebook.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"facebook",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Twitter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.twitter.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"twitter",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instagram",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.instagram.com",
+							"protocol": "http",
+							"host": [
+								"www",
+								"instagram",
+								"com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BearerToken (Automatic Chain Request)",
+			"item": [
+				{
+					"name": "Step1: Creating a new repo in github",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var responseData=pm.response.json()\r",
+									"var name=responseData.name\r",
+									"pm.collectionVariables.set(\"repo_name\", name);\r",
+									"console.log(name);\r",
+									"\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Postman_Repo_{{$isoTimestamp}}\",\r\n    \"description\": \"This is Bearer Authenication Token Verificaiton\",\r\n    \"homepage\": \"https://docs.github.com\",\r\n    \"private\": false,\r\n    \"has_issues\": true,\r\n    \"has_projects\": true,\r\n    \"has_wiki\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step2: Retreving the repo from github",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step3: Update the exisiting repo in github",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var responseData=pm.response.json()\r",
+									"var updated_name=responseData.name\r",
+									"pm.collectionVariables.set(\"updated_repo_name\", updated_name);\r",
+									"console.log(updated_name);\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.github+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <YOUR-TOKEN>"
+							},
+							{
+								"key": "X-GitHub-Api-Version",
+								"value": "2022-11-28"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Postman_Repo_Updated_{{$isoTimestamp}}\",\r\n    \"description\": \"This is Bearer Authenication Token Verificaiton\",\r\n    \"homepage\": \"https://docs.github.com\",\r\n    \"private\": false,\r\n    \"has_issues\": true,\r\n    \"has_projects\": true,\r\n    \"has_wiki\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/dharanichandrasekar/{{repo_name}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"dharanichandrasekar",
+								"{{repo_name}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step4: Delete the exisiting repo in github",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.github+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <YOUR-TOKEN>"
+							},
+							{
+								"key": "X-GitHub-Api-Version",
+								"value": "2022-11-28"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/dharanichandrasekar/{{updated_repo_name}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"dharanichandrasekar",
+								"{{updated_repo_name}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step5: InValid Bearer token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}_InvalidToken123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "repo_name",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "updated_repo_name",
+			"value": ""
+		},
+		{
+			"key": "access_token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

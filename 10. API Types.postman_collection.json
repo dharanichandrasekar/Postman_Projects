@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "21d2db0a-3d7e-470e-8c25-c2c2053c6bca",
+		"name": "10. API Types",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13800846"
+	},
+	"item": [
+		{
+			"name": "Rest API",
+			"item": [
+				{
+					"name": "POST : Create Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Dharnai\",\r\n    \"Designation\": \"Team Leader\"\r\n}"
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET:  View Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reqres.in/api/users?page=2",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE : Deleting Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://reqres.in/api/users/2",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT : Update Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"DharaniDharan\",\r\n    \"job\": \"zion resident\"\r\n}"
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users/2",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SOAP API",
+			"item": [
+				{
+					"name": "POST:FahrenheitToCelsius",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <FahrenheitToCelsius xmlns=\"http://webservices.daehosting.com/temperature\">\r\n      <nFahrenheit>100</nFahrenheit>\r\n    </FahrenheitToCelsius>\r\n  </soap:Body>\r\n</soap:Envelope>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://webservices.daehosting.com/services/TemperatureConversions.wso",
+							"protocol": "http",
+							"host": [
+								"webservices",
+								"daehosting",
+								"com"
+							],
+							"path": [
+								"services",
+								"TemperatureConversions.wso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST:CelsiusToFahrenheit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <CelsiusToFahrenheit xmlns=\"http://webservices.daehosting.com/temperature\">\r\n      <nCelsius>37</nCelsius>\r\n    </CelsiusToFahrenheit>\r\n  </soap:Body>\r\n</soap:Envelope>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://webservices.daehosting.com/services/TemperatureConversions.wso",
+							"protocol": "http",
+							"host": [
+								"webservices",
+								"daehosting",
+								"com"
+							],
+							"path": [
+								"services",
+								"TemperatureConversions.wso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST : Calculator - Add",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<Envelope xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n    <Body>\r\n        <Add xmlns=\"http://tempuri.org/\">\r\n            <intA>100</intA>\r\n            <intB>100</intB>\r\n        </Add>\r\n    </Body>\r\n</Envelope>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://www.dneonline.com/calculator.asmx",
+							"protocol": "http",
+							"host": [
+								"www",
+								"dneonline",
+								"com"
+							],
+							"path": [
+								"calculator.asmx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GraphQL API",
+			"item": [
+				{
+					"name": "Countries IN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query GetCountry {\n  country(code: \"IN\") {\n    name\n    native\n    capital\n    emoji\n    currency\n    languages {\n      code\n      name\n    }\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://countries.trevorblades.com/",
+							"protocol": "https",
+							"host": [
+								"countries",
+								"trevorblades",
+								"com"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": "Chemical surface reaction energies and structures\n\nURL: http://docs.catalysis-hub.org/en/latest/tutorials/index.html#graphql"
+					},
+					"response": []
+				},
+				{
+					"name": "Countries US",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query  {\n  country(code: \"US\") {\n    name\n    native\n    capital\n    emoji\n    currency\n    languages {\n      code\n      name\n    }\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://countries.trevorblades.com/",
+							"protocol": "https",
+							"host": [
+								"countries",
+								"trevorblades",
+								"com"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": "Chemical surface reaction energies and structures\n\nURL: http://docs.catalysis-hub.org/en/latest/tutorials/index.html#graphql"
+					},
+					"response": []
+				},
+				{
+					"name": "Countries currency USD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query ListCountriesThatUseUSD {\r\n  countries(filter: { currency: { eq: \"USD\" } }) {\r\n    code\r\n    name\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://countries.trevorblades.com/",
+							"protocol": "https",
+							"host": [
+								"countries",
+								"trevorblades",
+								"com"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Countries currency INR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query ListCountriesThatUseINR {\r\n  countries(filter: { currency: { eq: \"INR\" } }) {\r\n    code\r\n    name\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://countries.trevorblades.com/",
+							"protocol": "https",
+							"host": [
+								"countries",
+								"trevorblades",
+								"com"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InValid Schema",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{  \r\n    bitcoin \r\n    {    \r\n        blocks \r\n        {      \r\n            count  \r\n            }  \r\n        }\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://graphql.bitquery.io/",
+							"protocol": "https",
+							"host": [
+								"graphql",
+								"bitquery",
+								"io"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": "Providing on-chain blockchain analytics.\n\nURL - https://bitquery.io/blog/working-with-blockchain-data"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

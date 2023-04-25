@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "e3fde884-7ba7-4fd3-9256-8c5f4ad9c3e4",
+		"name": "#4. DataDriven Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13800846"
+	},
+	"item": [
+		{
+			"name": "Iteration-'N' number of times",
+			"item": [
+				{
+					"name": "Create users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"VijayRagavan\",\r\n    \"Job\": \"IT Proffesional\",\r\n    \"Designation\": \"Engineer\",\r\n    \"Location\":\"Chennai\"\r\n}"
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create users using Varaibles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"{{$randomFirstName}}\",\r\n    \"LastName\": \"{{$randomLastName}}\",\r\n    \"UserName\":\"{{$randomUserName}}\",\r\n    \"Job\": \"IT Proffesional\",\r\n    \"JobTitle\":\"{{$randomJobTitle}}\",\r\n    \"jobDescription\": \"{{$randomJobDescriptor}}\",\r\n    \"Designation\": \"Engineer\",\r\n    \"Email\":\"{{$randomEmail}}\",\r\n    \"Location\":\"{{$randomCity}}\",\r\n    \"Phone Number\" : \"{{$randomPhoneNumber}}\"\r\n}"
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data from CSV file",
+			"item": [
+				{
+					"name": "Data from CSV File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"{{Name}}\",\r\n    \"Job\": \"{{Job}}\",\r\n    \"Designation\": \"{{Desgination}}\",\r\n    \"Location\":\"{{Location}}\"\r\n}"
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data from Json File",
+			"item": [
+				{
+					"name": "Data from Json File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"{{Name}}\",\r\n    \"Job\": \"{{Job}}\",\r\n    \"Designation\": \"{{Desgination}}\",\r\n    \"Location\":\"{{Location}}\"\r\n}"
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

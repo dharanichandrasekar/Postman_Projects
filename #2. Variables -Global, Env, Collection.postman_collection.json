@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "b6ec603f-024a-4fd8-924c-f174e82a6db2",
+		"name": "#2. Variables -Global, Env, Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13800846"
+	},
+	"item": [
+		{
+			"name": "Collection Variable",
+			"item": [
+				{
+					"name": "Creating a New employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dharnai\",\r\n    \"salary\":\"1000\",\r\n    \"age\":\"23\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}/api/v1/create",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updating an existing employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dharnai Chandrasekar\",\r\n    \"salary\":\"2000\",\r\n    \"age\":\"24\"\r\n    } ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}/api/v1/update/605",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"605"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Viewing the particular employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/api/v1/employee/605",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"605"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Viewing all the employes list",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/api/v1/employees",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleting the particular employee",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/api/v1/delete/605",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delete",
+								"605"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Environment Variable",
+			"item": [
+				{
+					"name": "Creating a New employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dharnai\",\r\n    \"salary\":\"1000\",\r\n    \"age\":\"23\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{QA_Env_DummyAPI}}/api/v1/create",
+							"host": [
+								"{{QA_Env_DummyAPI}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updating an existing employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dharnai Chandrasekar\",\r\n    \"salary\":\"2000\",\r\n    \"age\":\"24\"\r\n    } ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{QA_Env_DummyAPI}}/api/v1/update/605",
+							"host": [
+								"{{QA_Env_DummyAPI}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"605"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Viewing the particular employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{QA_Env_DummyAPI}}/api/v1/employee/605",
+							"host": [
+								"{{QA_Env_DummyAPI}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"605"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Viewing all the employes list",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{QA_Env_DummyAPI}}/api/v1/employees",
+							"host": [
+								"{{QA_Env_DummyAPI}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleting the particular employee",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{QA_Env_DummyAPI}}/api/v1/delete/605",
+							"host": [
+								"{{QA_Env_DummyAPI}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delete",
+								"605"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Global Variable s",
+			"item": [
+				{
+					"name": "Creating a New employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dharnai\",\r\n    \"salary\":\"1000\",\r\n    \"age\":\"23\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DummyAPI_URL}}/api/v1/create",
+							"host": [
+								"{{DummyAPI_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updating an existing employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dharnai Chandrasekar\",\r\n    \"salary\":\"2000\",\r\n    \"age\":\"24\"\r\n    } ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DummyAPI_URL}}/api/v1/update/605",
+							"host": [
+								"{{DummyAPI_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"605"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Viewing the particular employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DummyAPI_URL}}/api/v1/employee/605",
+							"host": [
+								"{{DummyAPI_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"605"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Viewing all the employes list",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DummyAPI_URL}}/api/v1/employees",
+							"host": [
+								"{{DummyAPI_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleting the particular employee",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{DummyAPI_URL}}/api/v1/delete/605",
+							"host": [
+								"{{DummyAPI_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delete",
+								"605"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "Base_URL",
+			"value": "https://dummy.restapiexample.com"
+		}
+	]
+}

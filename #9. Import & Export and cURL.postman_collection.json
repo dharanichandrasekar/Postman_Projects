@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "1693f27f-e4bf-4380-bb4a-858258dfbd42",
+		"name": "#9. Import & Export and cURL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13800846"
+	},
+	"item": [
+		{
+			"name": "cURL operation",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

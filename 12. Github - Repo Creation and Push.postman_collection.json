@@ -1,0 +1,10 @@
+{
+	"info": {
+		"_postman_id": "d79606cd-15a4-4c93-878b-9211a349cf8b",
+		"name": "12. Github - Repo Creation and Push",
+		"description": "### Create a new repository in github, then go to the 'PostmanCollection' folder > command line :\n\n```\necho \"# Postman_Repo\" >> README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit branch -M main\ngit remote add origin https://github.com/dharanichandrasekar/Postman_Repo.git\ngit push -u origin main\n\n```\n\n### push an existing repository from the command line\n\n```\ngit remote add origin https://github.com/dharanichandrasekar/Postman_Repo.git\ngit branch -M main\ngit push -u origin main\n\n```\n\n_**\\*\\\\_\n\n**Step 1** : Download and Install Git\n\n**Step 2** : Create GitHub account\n\n**Step 3** : Create one new Repo named as “Postman_Repo” into Git, then keep the project files in your  \nlocal folder(location of Postman Project collection in D folder), then Goto Command Prompt\n\n**Commands**:\n\n- git init\n- git status\n- git add or git add .\n- git commit -m \"this is my first commit message\"\n- git status\n- git remote add origin [https://github.com/dharanichandrasekar/Postman_Repo.git](https://github.com/dharanichandrasekar/SoapUI_Repo.git)\n- git remot\n- git push -u origin master\n    \n\nStep 4 : Validate changes are pushed to repository in Github site\n\n****\\*",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13800846"
+	},
+	"item": []
+}
